@@ -1,1 +1,20 @@
 <p>listado!</p>
+
+<div *ngIf="status">
+  <h3>
+    Heroe Borrado: <small>{{ borrado }}</small>
+  </h3>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let item of heroes; let i = index">
+      {{ i + 1 }}:
+      {{ item }}
+    </li>
+  </ul>
+</div>
+
+<br />
+
+<button (click)="BorrarHeroe()">Borrar Heroe</button>

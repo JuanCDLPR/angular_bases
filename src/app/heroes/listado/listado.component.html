@@ -1,10 +1,14 @@
 <p>listado!</p>
 
-<div *ngIf="status">
+<div *ngIf="status; else noBorrado">
   <h3>
     Heroe Borrado: <small>{{ borrado }}</small>
   </h3>
 </div>
+
+<ng-template #noBorrado>
+  <h3>No ha borrado nada</h3>
+</ng-template>
 
 <div>
   <ul>

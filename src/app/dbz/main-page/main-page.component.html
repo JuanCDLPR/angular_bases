@@ -15,10 +15,22 @@
   <div class="col">
     <h3>Agregar</h3>
     <hr />
+    <!-- <small>{{ nuevo.nombre }} && {{ nuevo.poder }}</small> -->
 
     <form (ngSubmit)="agregar()">
-      <input placeholder="Nombre" type="text" />
-      <input type="number" name="" id="" placeholder="Poder" />
+      <input
+        name="nombre"
+        id=""
+        placeholder="Nombre"
+        type="text"
+        [(ngModel)]="nuevo.nombre"
+      />
+      <!-- [value]="nuevo.nombre"
+        (input)="cambiarNombre($event)" -->
+      <input type="number" name="poder" id="" [(ngModel)]="nuevo.poder" />
+      <!-- [value]="nuevo.poder" -->
+      <!-- placeholder="Poder" -->
+
       <button type="submit">Agregar</button>
     </form>
   </div>
